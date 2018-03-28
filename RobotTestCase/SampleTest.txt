@@ -1,0 +1,15 @@
+*** Settings ***
+Documentation     This is a sample test for presentation purposes
+Library           SeleniumLibrary
+Library           String
+Library           Collections
+
+*** Variables ***
+${url}            http://13.229.240.134:3000/
+
+*** Test Cases ***
+test
+    Open Browser    ${url}    chrome
+    Current Frame Should Contain    CI/CD Practice
+    Capture Page Screenshot
+    Close Browser
